@@ -13,5 +13,14 @@
 ## 2. 评估
 * [模型评估](/documents/模型评估.md)
 
+## 3. N元语法
+
+* [N元语法](/documents/N元语法.md)
+
+## 3. 分词
+* [分词](/documents/分词.md)
+
 ## 附录
-* [一些github仓库](/documents/some_repositories.md)
+* [不错仓库列表](/documents/附录/不错仓库列表.md)
+* [markdown语法](/documents/附录/markdown语法.md)
+* [nlp专业词汇中英文列表](/documents/附录/nlp专业词汇中英文列表.md)
