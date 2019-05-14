@@ -42,11 +42,13 @@ $$
 >"HE READ A BOOK BY DAVID"  
 
 $$
+\begin{split}
 p(BROWN|\langle BOS \rangle) = \frac{c(\langle BOS \rangle  \quad BROWN)}{\sum_w c(\langle BOS \rangle \quad w)}=\frac{1}{3} \\
 p(READ|BROWN) = \frac{c(BROWN \quad READ)}{\sum_w c(BROWN \quad w)}=\frac{1}{1}\\
 p(A|READ) = \frac{c(READ \quad A)}{\sum_w c(READ \quad w)}=\frac{2}{3}\\
 p(BOOK|A) = \frac{c(A \quad BOOK)}{\sum_w c(A \quad w)}=\frac{1}{2}\\
 p(\langle EOS \rangle|BOOK) = \frac{c(BOOK \quad \langle EOS \rangle)}{\sum_w c(BOOK \quad w)}=\frac{1}{2}
+\end{split}
 $$
 
 因此
