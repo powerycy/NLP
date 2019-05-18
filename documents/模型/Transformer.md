@@ -39,7 +39,7 @@ Self-Attention层可以在编码某个词时，关注到序列中其他单词的
 
 解码器同样有这些子层，但两个子层间增加了attention层，用于关注到输入句子的相关部分。其结构如图5：
 
-![Transformer_decoder](/assets/images/transformer/Transformer_decoder.png)
+![Transformer_decoder](/assets/images/transformer/transformer_decoder.png)
 <center>图5：解码器组成结构</center>
 
 ### 数据流动

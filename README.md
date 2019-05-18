@@ -25,6 +25,7 @@
 
 ## 6. 模型
 
+* [word2vec](/documents/模型/word2vec.md)
 * [Transformer](/documents/模型/Transformer.md)
 
 ## 附录
