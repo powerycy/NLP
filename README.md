@@ -28,6 +28,11 @@
 * [word2vec](/documents/模型/word2vec.md)
 * [Transformer](/documents/模型/Transformer.md)
 
+## 7. 基础
+* [Huffman编码](/documents/Huffman编码.md)
+* [负采样算法](/documents/负采样算法.md)
+
+
 ## 附录
 * [不错仓库列表](/documents/附录/不错仓库列表.md)
 * [markdown语法](/documents/附录/markdown语法.md)
