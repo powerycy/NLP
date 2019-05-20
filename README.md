@@ -25,12 +25,16 @@
 
 ## 6. 模型
 
+* [朴素贝叶斯](/documents/模型/naive_bayes.md)
+* [感知机](/documents/模型/感知机.md)
+* [SVM](/documents/模型/SVM.md)
 * [word2vec](/documents/模型/word2vec.md)
 * [Transformer](/documents/模型/Transformer.md)
 
 ## 7. 基础
 * [Huffman编码](/documents/Huffman编码.md)
 * [负采样算法](/documents/负采样算法.md)
+* [拉格朗日乘子法](/documents/拉格朗日乘子法.md)
 
 
 ## 附录
