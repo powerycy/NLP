@@ -29,6 +29,8 @@
 * [感知机](/documents/模型/感知机.md)
 * [SVM](/documents/模型/SVM.md)
 * [word2vec](/documents/模型/word2vec.md)
+
+* [FastText](/documents/模型/FastText.md)
 * [Transformer](/documents/模型/Transformer.md)
 
 ## 7. 基础
