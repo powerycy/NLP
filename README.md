@@ -31,6 +31,7 @@
 * [word2vec](/documents/模型/word2vec.md)
 
 * [FastText](/documents/模型/FastText.md)
+* [TextCNN](/documents/模型/TextCNN.md)
 * [Transformer](/documents/模型/Transformer.md)
 
 ## 7. 基础
