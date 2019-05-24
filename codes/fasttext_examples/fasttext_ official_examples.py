@@ -36,7 +36,7 @@ model.save_model('cooking.bin')
 
 # quantize模型，以减少模型的大小和内存占用。
 model.quantize(input=train_data, qnorm=True, retrain=True, cutoff=100000)
-print_results(*model.test(valid_data))
+print(*model.test(valid_data))
 model.save_model("cooking.ftz")
 # Progress: 100.0% words/sec/thread:  447976 lr:  0.000000 loss:  1.630192 ETA:   0h 0m
 # 3000 0.5313333333333333 0.22978232665417328

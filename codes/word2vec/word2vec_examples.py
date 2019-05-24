@@ -76,7 +76,7 @@ print("沙瑞金 高育良 李达康 刘庆祝：",model.wv.doesnt_match("沙瑞
 
 # 保存模型，保存词向量,加载模型
 # model.save("./word2vec_gensim")
-# model.wv.save_word2vec_format("data/model/word2vec_org",
-#                                   "data/model/vocabulary",
+# model.wv.save_word2vec_format("./vectors", # 词与向量，
+#                                   "./vocabulary", # 词与词频
 #                                   binary=False)
-# model = word2vec.Word2Vec.load('./word2vec_gensim')
+# model.wv.save("./kv") # 二进制文件
