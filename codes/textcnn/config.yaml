@@ -1,0 +1,25 @@
+---
+# 模型参数
+vocab_size: 5000 # 词汇数目
+embedding_dim: 100 # embedding 维度
+convs:  # 各个卷积的大小和通道数
+  -
+    kernel_size: 3
+    out_channels: 100
+    k_max_pooling: 2
+  -
+    kernel_size: 4
+    out_channels: 100
+    k_max_pooling: 2
+  -
+    kernel_size: 5
+    out_channels: 100
+    k_max_pooling: 2
+dropout: 0.5
+num_labels: 10
+
+# 训练参数
+epoch: 10
+batch_size: 64
+max_seq_len: 4000
+print_per_batch: 100

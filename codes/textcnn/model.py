@@ -129,7 +129,7 @@ class TextCNN(nn.Module):
         
 if __name__ == "__main__":
 
-    config = Config('./data/config.yaml')
+    config = Config('./config.yaml')
     model = TextCNN(config,None)
 
     x = torch.randint(0,20,(5,76)) # N,C

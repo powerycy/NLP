@@ -46,7 +46,7 @@ def evaluate(model, test_dataloader,device):
 
 def train():
     # 配置文件
-    cf = Config('./data/config.yaml')
+    cf = Config('./config.yaml')
     # 有GPU用GPU
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -126,7 +126,7 @@ def train():
 
 def test():
     # 配置文件
-    cf = Config('./data/config.yaml')
+    cf = Config('./config.yaml')
     # 有GPU用GPU
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
