@@ -82,7 +82,7 @@ K-Max Pooling是一种全局取Top K特征的操作方式，而Chunk-Max Pooling
 
 ## 代码
 
-参见[codes/textcnn](codes/textcnn)
+参见[codes/textcnn](/codes/textcnn)
 
 ---
 **参考**：
