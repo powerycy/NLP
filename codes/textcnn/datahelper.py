@@ -49,8 +49,13 @@ def get_pre_embedding_matrix(src_file):
             arr.append(vec)
     return arr
 
-if __name__ == "__main__":
-    ds = NewsDataset("./data/cnews_final_test.txt",300)
-    print(ds[0])
-    get_pre_embedding_matrix("./data/final_vectors")
+def get_labels(src_file):
+    with open(src_file,'r',encoding='utf-8') as f:
+        return [line.strip() for line in f.readlines()]
+        
 
+if __name__ == "__main__":
+    # ds = NewsDataset("./data/cnews_final_test.txt",300)
+    # print(ds[0])
+    # get_pre_embedding_matrix("./data/final_vectors")
+    print(get_labels('./data/label'))

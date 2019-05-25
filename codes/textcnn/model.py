@@ -64,7 +64,7 @@ class TextCNN(nn.Module):
         # 初始化权重
         self.apply(self.init_weights)
 
-    def forward(self,x,labels):
+    def forward(self,x,labels=None):
         # embedding
         em1 = self.embeddings_static(x) # NL -> NLD
         em2 = self.embeddings_non_static(x) # NL -> NLD
@@ -95,6 +95,23 @@ class TextCNN(nn.Module):
             loss = loss_fct(logits, labels)
             return loss
 
+    def get_labels(self,x):
+        logits = self.forward(x)
+        labels = torch.argmax(logits,1)
+        labels = labels.to("cpu").numpy()
+        return labels
+
+    def get_loss_acc(self,x,labels):
+        logits = self.forward(x)
+
+        loss_fct = CrossEntropyLoss()
+        loss = loss_fct(logits, labels)
+
+        eq = torch.argmax(logits,1) == labels
+        eq = eq.to("cpu").numpy()
+        acc = eq.sum()/len(eq)
+
+        return loss,acc
 
     def init_weights(self,module):
         if isinstance(module,nn.Embedding):
