@@ -32,6 +32,10 @@
 
 * [FastText](/documents/模型/FastText.md)
 * [TextCNN](/documents/模型/TextCNN.md)
+
+* [RNN](/documents/模型/RNN.md)
+* [LSTM](/documents/模型/LSTM.md)
+
 * [Transformer](/documents/模型/Transformer.md)
 
 ## 7. 基础

@@ -116,3 +116,4 @@ dmypy.json
 .pyre/
 data/
 output/
+.vscode/
