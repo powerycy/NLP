@@ -52,7 +52,7 @@ class TextRNN(nn.Module):
         # # 解压缩
         # output, _ = pad_packed_sequence(packed_output)
         # 不需要解压缩，hn就是每个句子最后一个字符的输出，
-        # 如果解压后，去output最后的值，则是填充后最后的输出，有填充的结果就是0了
+        # 如果解压后，取output最后的值，则是填充后最后的输出，有填充的结果就是0了
 
         # 不压缩
         # out:  (seq_len, batch, num_directions * hidden_size)
@@ -66,7 +66,7 @@ class TextRNN(nn.Module):
         hn = hn.view(self.lstm.num_layers, -1, batch, hidden_size)
         # 取最后一层结果
         hn = hn[-1]
-        # 转换为 batch优先,并合
+        # 转换为 batch优先,并合并
         hn = hn.transpose(0,1).view(batch,-1)
 
         # 分类

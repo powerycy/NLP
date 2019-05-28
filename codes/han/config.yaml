@@ -1,0 +1,16 @@
+---
+# 模型参数
+vocab_size: 20000 # 词汇数目
+embedding_dim: 100 # embedding 维度
+hidden_size: 200 # 隐藏单元维度
+num_layers: 2 # GRU 层数
+dropout: 0.5
+bidirectional: true # 是否双向 GRU
+num_labels: 10
+
+# 训练参数
+epoch: 10
+batch_size: 64
+max_sen_len: 100 # 一篇文章最多100句话
+max_word_len: 50 # 一句话最多50字
+print_per_batch: 100
