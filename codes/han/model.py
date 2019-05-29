@@ -40,16 +40,16 @@ class Attention(nn.Module):
         # padding的数据不应该被关注，所以将分值设为一个默认的很低的值
         # 有数据的地方为标记为0，padding的地方标记为-10000
         # 加到原始的分值上即可
-        temp_idx = torch.arange(attention_scores.size(1)).expand_as(attention_scores)
+        temp_idx = torch.arange(attention_scores.size(1)).expand_as(attention_scores).to(attention_scores.device)
         len_expand = lengths.unsqueeze(1).expand_as(attention_scores)
-        mask = torch.ge(temp_idx,len_expand).to(dtype=attention_scores.dtype) * -10000.0
+        mask = torch.ge(temp_idx,len_expand).float() * -10000.0
         
         attention_scores = attention_scores + mask # (N,L)
 
         attention_probs = nn.Softmax(dim=-1)(attention_scores) # (N,L)
-        result = torch.matmul(attention_probs.unsqueeze(1), key).squeeze(1) # K和V都是同一个东西  (N,D)
+        result = torch.matmul(attention_probs.unsqueeze(1), hidden_states.transpose(0,1)).squeeze(1) 
 
-        return result
+        return result # (N,D)
 
 class TextHAN(nn.Module):
     def __init__(self,cf,embedding_matrix):
@@ -118,7 +118,8 @@ class TextHAN(nn.Module):
         sentence_vector = self.word_attention(word_output,word_x_lens_post)
         # 补上删掉的0长度句子
         n_0 = n*sl-len(sentence_vector)
-        sentence_vector = torch.cat((sentence_vector,torch.zeros((n_0,)+sentence_vector.size()[1:])),dim=0)
+        pad_0 = torch.zeros((n_0,)+sentence_vector.size()[1:]).to(sentence_vector.device)
+        sentence_vector = torch.cat((sentence_vector,pad_0),dim=0)
 
         # 把句子还原为原来 batch 个文章的格式
         _,restore_idx = word_x_idx.sort(0,descending=False)
@@ -144,7 +145,10 @@ class TextHAN(nn.Module):
         
         # 进行 attention，得到文档向量
         document_vector = self.sent_attention(sent_output,sent_x_lens)
-        
+        # 还原顺序
+        _,restore_idx = sent_x_idx.sort(0,descending=False)
+        document_vector = document_vector[restore_idx]
+
         # 分类
         logits = self.classifier(document_vector)
 
@@ -179,6 +183,14 @@ class TextHAN(nn.Module):
                 module.weight.data.copy_(self.embedding_matrix)
             else:
                 module.weight.data.normal_(0,0.1)
+        elif isinstance(module,nn.GRU):
+            pass
+            # for i,arr in enumerate(module.all_weights):
+            #     for j,m in enumerate(arr):
+            #         if module._all_weights[i,j].startswith("weight"):
+            #             m.data.normal_(mean=0.0, std=0.01)
+            #         elif module._all_weights[i,j].starstwith('bias'):
+            #             m.data.normal_(mean=0.0, std=0.01)
         elif isinstance(module,nn.Linear):
             module.weight.data.normal_(0,0.1)
             if module.bias is not None:

@@ -4,6 +4,7 @@
 使用的是 THUCNews 的一个子集，下载地址：链接: https://pan.baidu.com/s/1hugrfRu 密码: qfud
 
 (查看[TextRNN](/codes/textrnn))
+(查看[HAN](/codes/han))
 
 创建两个文件夹：data,output。将数据集中的 txt 文件放置在data目录下。output到时候用来保存训练好的模型
 

@@ -55,10 +55,11 @@ def top_k_vec(src_file,stop_file,tag_file,k):
         top_k = [pad,unk]
         for line in f:
             arr = line.strip().split(" ")
-            if arr[0] not in stop:
-                top_k.append(line.strip())
-                if len(top_k)>=k:
-                    break
+            if len(arr) == 101:
+                if arr[0] not in stop:
+                    top_k.append(line.strip())
+                    if len(top_k)>=k:
+                        break
 
     with open(tag_file,'w',encoding='utf-8') as f:
         f.write("\n".join(top_k))

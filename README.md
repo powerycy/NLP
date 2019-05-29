@@ -44,6 +44,11 @@
 * [负采样算法](/documents/负采样算法.md)
 * [拉格朗日乘子法](/documents/拉格朗日乘子法.md)
 
+## 8. 代码实现
+
+[TextCNN](/codes/textcnn)
+[TextRNN](/codes/textrnn)
+[HAN](/codes/han)
 
 ## 附录
 * [不错仓库列表](/documents/附录/不错仓库列表.md)

@@ -11,7 +11,7 @@ from torch.utils.data import Dataset
 
 
 class NewsDataset(Dataset):
-    def __init__(self,data_file,max_seq_len):
+    def __init__(self,data_file,max_word_len,max_sen_len):
         super().__init__()
 
         self.data = []
@@ -23,21 +23,40 @@ class NewsDataset(Dataset):
                     continue
 
                 label_id,sentence = arr
-                segment = sentence.split(" ")
-                
+                # label
                 label_id = int(label_id)
-                segment_ids = [int(i) for i in segment]
-                segment_ids = segment_ids[:max_seq_len]
 
-                seq_len = len(segment_ids)
-                # padding
-                padding = [0]*(max_seq_len-len(segment_ids))
-                segment_ids += padding
+                x = []
+                lengths = []
+
+                sent_arr = sentence.split("|")
+                for sent in sent_arr:
+                    if len(sent)<=0:
+                        continue
+                    word_arr = sent.split(" ")
+                    word_ids = [int(w) for w in word_arr]
+                    word_ids = word_ids[:max_word_len]
+                    word_len = len(word_ids)
+                    # 词级别 padding 
+                    padding = [0]*(max_word_len-word_len)
+                    word_ids += padding
+
+                    x.append(word_ids)
+                    lengths.append(word_len)
+                
+                # 句子级别 padding
+                x = x[:max_sen_len]
+                lengths = lengths[:max_sen_len]
+                pad_len = max_sen_len - len(x)
+                
+                padding = [[0]*max_word_len]*pad_len
+                x += padding
+                lengths += [0]*pad_len
 
                 self.data.append({
                     "label_id":torch.LongTensor([label_id]).to('cpu'),
-                    "seq_len":seq_len,
-                    "segment_ids":torch.LongTensor(segment_ids).to('cpu')
+                    "x":torch.LongTensor(x).to("cpu"),
+                    "lengths":torch.LongTensor(lengths).to('cpu')
                 })
     
     def __getitem__(self,item):

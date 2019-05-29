@@ -9,7 +9,7 @@ bidirectional: true # 是否双向 GRU
 num_labels: 10
 
 # 训练参数
-epoch: 10
+epoch: 20
 batch_size: 64
 max_sen_len: 100 # 一篇文章最多100句话
 max_word_len: 50 # 一句话最多50字
