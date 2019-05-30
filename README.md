@@ -38,6 +38,7 @@
 * [HAN (Hierarchical Attention Networks)](/documents/模型/HAN.md)
 
 * [Transformer](/documents/模型/Transformer.md)
+* [BERT](/documents/模型/BERT.md)
 
 ## 7. 基础
 * [Huffman编码](/documents/Huffman编码.md)
