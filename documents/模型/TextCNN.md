@@ -80,9 +80,9 @@ Networks》](http://www.nlpr.ia.ac.cn/cip/yubochen/yubochenPageFile/acl2015chen.
 K-Max Pooling是一种全局取Top K特征的操作方式，而Chunk-Max Pooling则是先分段，在分段内包含特征数据里面取最大值，所以其实是一种局部Top K的特征抽取方式。
 
 
-## 代码
+## 代码实现
 
-参见[codes/textcnn](/codes/textcnn)
+查看[TextCNN](/codes/textcnn)
 
 ---
 **参考**：

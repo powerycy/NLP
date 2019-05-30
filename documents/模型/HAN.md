@@ -85,6 +85,11 @@ p = softmax(W_cv + b_c).
 $$
 
 
+## 代码实现
+
+查看[HAN](/codes/han)
+
+
 ---
 **参考**： 
 1. 论文：[《Hierarchical Attention Networks for Document Classification》](https://www.cs.cmu.edu/~./hovy/papers/16HLT-hierarchical-attention-networks.pdf)

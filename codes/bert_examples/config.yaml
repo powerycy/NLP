@@ -1,0 +1,10 @@
+---
+# 模型参数
+num_labels: 10
+
+# 训练参数
+epoch: 3
+batch_size: 10 # bert 太大，只能设置比较小才能跑起来
+max_seq_len: 100 # bert 太大，论文最大512，但硬件跑步起来了
+print_per_batch: 300
+lr: 0.00005

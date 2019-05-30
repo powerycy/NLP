@@ -46,9 +46,9 @@
 
 ## 8. 代码实现
 
-[TextCNN](/codes/textcnn)
-[TextRNN](/codes/textrnn)
-[HAN](/codes/han)
+* [TextCNN](/codes/textcnn)
+* [TextRNN](/codes/textrnn)
+* [HAN](/codes/han)
 
 ## 附录
 * [不错仓库列表](/documents/附录/不错仓库列表.md)
