@@ -35,8 +35,8 @@
 
 * [RNN](/documents/模型/RNN.md)
 * [LSTM](/documents/模型/LSTM.md)
+* [Attention](/documents/模型/Attention.md)
 * [HAN (Hierarchical Attention Networks)](/documents/模型/HAN.md)
-
 * [Transformer](/documents/模型/Transformer.md)
 * [BERT](/documents/模型/BERT.md)
 
