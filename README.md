@@ -38,6 +38,11 @@
 * [Attention](/documents/模型/Attention.md)
 * [HAN (Hierarchical Attention Networks)](/documents/模型/HAN.md)
 * [Transformer](/documents/模型/Transformer.md)
+* [Universal Transformers](/documents/模型/Universal_Transformers.md)
+* [Transformer-XL](/documents/模型/Transformer-XL.md)
+
+* [ELMo](/documents/模型/ELMo.md)
+* [GPT](/documents/模型/GPT.md)
 * [BERT](/documents/模型/BERT.md)
 
 ## 7. 基础
