@@ -44,6 +44,7 @@
 * [ELMo](/documents/模型/ELMo.md)
 * [GPT](/documents/模型/GPT.md)
 * [BERT](/documents/模型/BERT.md)
+* [BERT-wwm](/documents/模型/BERT-wwm.md)
 
 ## 7. 基础
 * [Huffman编码](/documents/Huffman编码.md)
