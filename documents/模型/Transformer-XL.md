@@ -1,4 +1,4 @@
-# Transformer-XL 
+# Transformer-XL （翻译）
 
 ## 摘要
 
@@ -239,8 +239,8 @@ Jozefowicz et al. (2016) - LSTM + CNN Input |1.04B| 30.0
 Shazeer et al. (2017) - Low-Budget MoE |∼5B| 34.1
 Shazeer et al. (2017) - High-Budget MoE |∼5B| 28.0
 Shazeer et al. (2018) - Mesh Tensorflow |4.9B| 24.0
-Baevski and Auli (2018) - Adaptive Input$\diamond$ |0.46B| 24.1
-Baevski and Auli (2018) - Adaptive Input$\diamond$ |1.0B| 23.7
+Baevski and Auli (2018) - Adaptive Input$\diamond$ |0.46B| 24.1
+Baevski and Auli (2018) - Adaptive Input$\diamond$ |1.0B| 23.7
 ----------------------------------------|-----|-----
 Ours - Transformer-XL Base |0.46B| 23.5
 Ours - Transformer-XL Large |0.8B| **21.8**
