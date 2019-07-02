@@ -311,8 +311,8 @@ conference on research and development in information retrieval, pages 55–64. 
 ### 3.7 消融研究
 
 
-# |Model |RACE |SQuAD2.0（F1） |SQuAD2.0（EM） |MNLI(m/mm) |SST-2
--|-|-|-|-|-|-
+|#|Model |RACE |SQuAD2.0（F1） |SQuAD2.0（EM） |MNLI(m/mm) |SST-2|
+|-|-|-|-|-|-|-|
 1 |BERT-Base |64.3 |76.30 |73.66 |84.34/84.65 |92.78
 2 |DAE + Transformer-XL |65.03 |79.56 |76.80 |84.88/84.45 |92.60
 3 |XLNet-Base (K = 7) |66.05 |**81.33** |**78.46** |**85.84/85.43** |92.66
